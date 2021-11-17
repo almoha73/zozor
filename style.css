@@ -1,0 +1,231 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'ballparkweiner';
+    src: url('polices/webfontkit-20210908-053646/ballpark-webfont.woff2') format('woff2'),
+         url('polices/webfontkit-20210908-053646/ballpark-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'day_romanregular';
+    src: url('dayrom-webfont.woff2') format('woff2'),
+         url('dayrom-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    width: 100%;
+    background-color: #fef7d8;
+    
+}
+.main{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+/*tout le haut jusqu'à la section*/
+header{
+    margin-top: 5px;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 115px;
+    background: url('images/separateur.png') repeat-x bottom;
+}
+.titre{
+    display: flex;
+    flex-direction: column;
+}    
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+}
+.logo img{
+    padding: 10px;
+    width: 60px;
+    height:60px;
+}
+.logo h1{
+    font-family: 'ballparkweiner';
+    
+}
+
+.titre h2{
+    font-size: 15px;
+    text-align: right;
+}
+ul{
+    display: flex;
+    margin-top: 65px;  
+    
+}
+.menu ul li{
+    list-style-type: none;
+    padding: 10px;
+    font-size: 18px;    
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+.menu ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.photo{
+    background-image: url(images/sanfrancisco.jpg);
+    background-size: cover;
+    height: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.banniere{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: black;
+    position: relative;
+    top: 120px;
+    opacity: 0.7;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;   
+}
+
+.boutonrouge{
+    background: linear-gradient(rgb(173, 83, 83), #7e0e10);
+    border-radius: 5px;
+    padding: 4px;
+    opacity: 1;
+  
+}
+.banniere a{
+    text-decoration: none;
+    color: white;
+}
+
+/*debut de la partie centrale*/
+article{
+    margin-top: 20px;
+    
+    width: 62%;
+    text-align: justify;
+}
+aside{
+    background-color: #6f6a63;
+    width: 31%;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 6px;
+    height: 440px;
+    color: white;
+}
+aside h1{
+    text-align: center;
+    
+}
+aside p.ane{
+    text-align: center;
+}
+aside p{
+    text-align: justify;
+}
+aside .social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fleche_grise{
+    position: relative;
+    top: 100px;
+    right: 22px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%;
+    border-bottom: 2px solid #bda285;
+}
+p.ico_top{
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+}
+
+/*debut du footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%;
+    height: 130px;
+    padding-top: 0px;
+}
+.milieu .photos{
+    display: flex;
+    justify-content: space-evenly;  
+}
+.milieu{
+    flex:0.8;
+}
+
+.mes_amis{
+    flex: 0.55;
+}
+.gauche{
+    flex: 0.6;
+}
+div.mes_amis div.liste_ami{
+    columns: 2;
+    color: rgb(139, 39, 39);
+    font-size: 11px;
+}
+.bordure_black{
+    border: 1px solid black;
+    height: 69px;
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+   body{
+       display: flex;
+       flex-direction: column;
+       width: 98%;
+   }
+   
+   aside{
+       width: 100%;
+
+   }
+   article{
+       width: 100%;
+   }
+   section{
+       display: flex;
+       flex-direction: column;
+   }
+   footer{
+       flex-direction: column;
+       margin-top: 20px;
+       
+   }
+   footer p{
+       width: 100%;
+       text-align: center;
+   }
+   .mes_amis{
+       margin-top: 10px;
+       margin-bottom: 20px;
+   }
+}
