@@ -1,6 +1,7 @@
-*{
+*, ::before, ::after{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -35,7 +36,7 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
-    height: 115px;
+    height: auto;
     background: url('images/separateur.png') repeat-x bottom;
 }
 .titre{
@@ -51,7 +52,7 @@ nav{
 .logo img{
     padding: 10px;
     width: 60px;
-    height:60px;
+    height: 60px;
 }
 .logo h1{
     font-family: 'ballparkweiner';
@@ -59,8 +60,9 @@ nav{
 }
 
 .titre h2{
-    font-size: 15px;
+    font-size: 18px;
     text-align: right;
+    
 }
 ul{
     display: flex;
@@ -70,7 +72,7 @@ ul{
 .menu ul li{
     list-style-type: none;
     padding: 10px;
-    font-size: 18px;    
+    font-size: 3vmin;    
 }
 .menu ul li a{
     text-decoration: none;
@@ -170,15 +172,17 @@ footer{
     justify-content: space-between;
     margin-left: 6%;
     margin-right: 6%;
-    height: 130px;
-    padding-top: 0px;
+    height: auto;
 }
-.milieu .photos{
+.photos{
     display: flex;
     justify-content: space-evenly;  
 }
 .milieu{
     flex:0.8;
+}
+.milieu p{
+    text-align: center;
 }
 
 .mes_amis{
@@ -197,13 +201,22 @@ div.mes_amis div.liste_ami{
     height: 69px;
 }
 
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+@media  screen and (min-width : 320px) and (max-width : 1024px) {
    body{
        display: flex;
        flex-direction: column;
        width: 98%;
    }
-   
+   nav{
+       flex-direction: column;
+   }
+   ul{
+       margin-top: 10px;
+       margin-left: 30px;
+   }
+   .titre h2{
+       text-align: left;
+   }
    aside{
        width: 100%;
 
@@ -218,14 +231,21 @@ div.mes_amis div.liste_ami{
    footer{
        flex-direction: column;
        margin-top: 20px;
-       
+       height: auto;
    }
    footer p{
        width: 100%;
        text-align: center;
    }
+   .milieu p{
+    margin-top: 25px;
+    }
+    .photos img{
+        background-color: aqua;
+        
+    }
    .mes_amis{
        margin-top: 10px;
-       margin-bottom: 20px;
+       margin-bottom: 40px;
    }
 }
